@@ -1,0 +1,178 @@
+/**/
+
+@font-face 
+{
+    font-family:'Roboto' ;
+    src: url("../Polices/Roboto/Roboto-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url("../Polices/Shrikhand/Shrikhand-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: Roboto;
+    margin:0;
+}
+
+a 
+{
+    color: black;
+    text-decoration: none; 
+}
+
+#logo
+{
+    width:50%;
+}
+
+.ohmyfood
+{
+    display: flex ;
+    justify-content: center;
+    padding: 15px;
+    border-bottom: 2px solid #353535;
+    
+}
+
+.location
+{
+    background-color: #eaeaea;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location span
+{
+    margin: 0 15px 0 0;
+}
+
+/**********************explorer*****************************/
+
+.explorer
+{
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/************************box navigation**********************/
+
+.nav-box{
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width:75%;
+    height: 65px;
+    margin: 15px;
+}
+
+.nav-box:hover{
+    background-color:#f5edff
+}
+
+nav
+{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+nav h3
+{
+    margin-right: 50px;
+}
+
+/******************************* Restaurants **************************************/
+
+.restaurants
+{
+    background-color: #f6f6f6;
+    display:flex;
+    flex-direction: column;
+    padding:20px;
+}
+
+.box-restaurants
+{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: white;
+    height: auto;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.box-restaurants span
+{
+    font-size: 20px;
+}
+
+.restaurant-img
+{
+    width:100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height:150px;
+    object-fit: cover;
+    display:flex;
+    flex-direction: column;
+}
+
+.box-details
+{
+    padding: 15px 10px 15px 10px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.box-details p
+{
+    margin:0;
+}
+
+.far:hover{
+    color:#9356DC;
+}
+
+/**************** footer ******************/
+
+footer
+{
+    color:white;
+    background-color: #353535;
+    padding: 5px;
+    font-size: 0.9rem;
+    padding-left: 20px;
+}
+
+footer>ul
+{
+    list-style-type: none;
+    padding:0;
+}
+
+footer li 
+{
+    margin-bottom: 5px;
+}
+
+footer span{
+    display:inline-block;
+    width: 25px;
+}
+
+.footer-logo{
+    font-family: Shrikhand;
+}
