@@ -71,9 +71,9 @@ a
 .explorer-button
 {
     border-radius: 25px;
-    background-color: #9356DC;
     color: #eaeaea;
     margin-bottom: 35px;
+    background: linear-gradient(#ff79da, #9356DC);
 }
  .explorer-button>p
  {
@@ -92,12 +92,15 @@ a
     width:75%;
     height: 65px;
     margin: 15px;
+    position: relative;
 }
 
 .nav-box:hover{
     background-color:#f5edff
 }
-
+.nav-box:hover .fas{
+    color:#9356DC;
+}
 nav
 {
     display:flex;
@@ -109,6 +112,27 @@ nav
 nav>h3
 {
     margin-right: 215px;
+}
+
+.number
+{
+    color: #eaeaea;
+    background-color: #9356DC;
+    border-radius: 30px;
+    width:30px;
+    height:30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-right: 295px;
+    top: 50%;
+    left:-15px;
+    transform: translateY(-50%); /* */
+}
+.nav-box>.fas
+{
+    color: #7e7e7e;
 }
 
 /******************************* Restaurants **************************************/
@@ -160,9 +184,13 @@ nav>h3
     margin:0;
 }
 
-.far:hover{
+.like:hover .check {
     color:#9356DC;
 }
+
+
+
+
 
 /**************** footer ******************/
 
