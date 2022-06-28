@@ -25,12 +25,14 @@
         transform:translateY(0);
     }
 }
+
 @keyframes check-appear
 {
-    from {transform: translateX(0);
-}
-    to{
-        transform: translateX(30%) ;
+    from {
+        width: 0 !important;
+    }
+    to {
+        width:75px !important;
     } 
 }    
 
@@ -59,8 +61,7 @@ a
 {
     display: flex ;
     justify-content: center;
-    padding: 15px;
-     
+    padding: 15px;   
 }
 
 header
@@ -91,6 +92,7 @@ header
 .loading {
     display: flex;
     justify-content: center;
+    background-color:
   }
   
   .loading--full-height {
@@ -106,7 +108,7 @@ header
     border-top-color: #009579;
     border-radius: 50%;
     transform: rotate(0.16turn);
-    animation: loading 1s ease 5;
+    animation: loading 1s ease infinite;
     
   }
   
@@ -129,18 +131,14 @@ header
     border-top-left-radius: 35px;
     margin-top: -30px;
     position:relative;
-
 }
-
-
 
 .name
 {
     font-family: Shrikhand;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-   
+    align-items: center; 
 }
 
 .name>.far:hover
@@ -167,10 +165,11 @@ header
 {
     margin-left: 20px;
     border-bottom:2px solid #99e2d0;
-    width:40px; 
+    width:5%; 
 }
 
-.category>h5{
+.category>h5
+{
     margin:0;
 }
 
@@ -188,26 +187,32 @@ header
     height: 60px;
     font-size: 0.95em;
     overflow: hidden;
-    min-width: 300px;
     position:relative;
 }
 
 .choise-check
 {
     background-color: #99e2d0;
-    margin-right:-70px;
-    padding: 30px 25px 25px 0;
-    animation: check-appear 0.5s forwards;
+    padding: 25px 25px 25px 0;
+    position: absolute;
+    top:0;
+    right: -100%; 
+}
+
+.choise:hover 
+{
+    padding-right: 80px;
+    transition: all 500ms ease; 
 }
 
 .choise:hover .choise-check 
 {
     transition: all 500ms ease; 
-    margin-right:5px;
-    transform-origin: 30% 0;
+    right:0;
 }
 
-.choise:hover .fas{
+.choise:hover .fas
+{
     transform:  rotate(-360deg);
     transition: all 500ms ease;
 }
@@ -276,15 +281,14 @@ header
     font-size:0.9em;
     overflow:hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
-    
+    text-overflow: ellipsis;   
 }
 
 .price
 {
-    margin:30px -10px 5px 10px;
     display: block;  
 }
+
 /**************** footer ******************/
 
 footer
@@ -328,10 +332,12 @@ footer span
     {
         justify-content: center;
     }
+
     .name>h2
     {
         margin-right:30px;
     }
+
     .entries
     {
         display:flex;
@@ -345,24 +351,21 @@ footer span
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
     }
+
     .desserts
     {
         display:flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    .choise
-    {
-        width: 580px;
-        font-size: 1em;
+
     }
 
-    .price{
-        margin: 30px -10px 5px 200px;
-        position:fixed;
-        left: 295px;
+    .price
+    {
+        margin: 5px ;
     }
 
     .category{
@@ -370,6 +373,12 @@ footer span
         margin: 5px 0;
     }
 
+    .choise
+    {
+        width:500px;
+    }
+
+    
 
 }
 
