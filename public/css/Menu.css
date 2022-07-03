@@ -36,12 +36,27 @@
     } 
 }    
 
+ @keyframes appear{
+    from {opacity: 0;}
+    to { opacity: 1;}
+ }
+
+ @keyframes disappear{
+    from {opacity: 1;}
+    to { opacity: 0; z-index: -1000;}
+ }
 
 body
 {
     font-family: Roboto;
     margin:0;
     min-height: 300px;
+    animation: appear 3s linear ;
+    -webkit-animation: appear 3s linear;
+    animation-delay: 5s;
+    -webkit-animation-delay: 5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
 }
 
 a 
@@ -50,7 +65,9 @@ a
     text-decoration: none; 
 }
 
+
 /*************Header************/
+
 
 #logo
 {
@@ -88,41 +105,71 @@ header
     object-fit: cover;
 }
 
-/****************loader*********************
-.loading {
-    display: flex;
-    justify-content: center;
-    background-color:
-  }
-  
-  .loading--full-height {
-    align-items: center;
+
+/****************loader*********************/
+
+
+.loader-position
+{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-  }
-  
-  .loading::after {
-    content: "";
-    width: 50px;
-    height: 50px;
-    border: 10px solid #dddddd;
-    border-top-color: #009579;
+    z-index: 1000;
+    background-color: white;
+    animation: disappear 0.5s ease-in;
+    animation-delay: 5s;
+    -webkit-animation-delay: 5s;
+    opacity:1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.loader {
+    width: 120px;
+    height: 120px;
+    border: 6px solid #fff;
     border-radius: 50%;
-    transform: rotate(0.16turn);
-    animation: loading 1s ease infinite;
-    
+    border-top-color:#99e2d0 ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: spin 1s linear 5 ;
+    -webkit-animation: spin 1s linear 5;
+
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
   }
-  
-  @keyframes loading {
-    from {
-      transform: rotate(0turn);
+
+  @-webkit-keyframes spin {
+    99.999% {
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
+      opacity: 1;
     }
-    
-    to {
-      transform: rotate(1turn);
+    100% {   
+      opacity: 0;
+    }
+  }
+
+  @keyframes spin {
+    99.999% {
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
+      opacity: 1;
+    }
+    100% {   
+      opacity: 0;
     }
   }
 
 /***************Menu**************************/
+
+
+
+ /*******************************************/
 
 #container
 {
@@ -229,24 +276,26 @@ header
 .animation
 {
     animation:fadein 1.7s forwards;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
     opacity:0;
 }
 
 .animation:nth-of-type(2)
 {
-    animation-delay: 0.2s;
+    animation-delay: 5.2s;
 }
 .animation:nth-of-type(3)
 {
-    animation-delay: 0.4s;
+    animation-delay: 5.4s;
 }
 .animation:nth-of-type(4)
 {
-    animation-delay: 0.6s;
+    animation-delay: 5.6s;
 }
 .animation:nth-of-type(5)
 {
-    animation-delay: 0.8s;
+    animation-delay: 5.8s;
 }
 
 .order
@@ -325,9 +374,9 @@ footer span
 
 /****** Responsive ******/
 
+
 @media screen and (min-width:630px)
 { 
- 
     .name
     {
         justify-content: center;
@@ -377,9 +426,6 @@ footer span
     {
         width:500px;
     }
-
-    
-
 }
 
 
