@@ -165,7 +165,6 @@ header
     }
   }
 
-/***************Menu**************************/
 
 
 
@@ -312,6 +311,10 @@ header
     cursor: pointer;
 }
 
+.order:hover{
+    filter:brightness(1.25);
+}
+
 .order-button
 {
     display: flex;
@@ -358,6 +361,12 @@ footer>ul
 footer li 
 {
     margin-bottom: 5px;
+}
+
+footer li>a
+{
+    text-decoration: none;
+    color: #fff;
 }
 
 footer span
